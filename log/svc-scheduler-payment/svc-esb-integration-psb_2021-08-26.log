@@ -1,0 +1,1838 @@
+2021-08-26T16:25:01,039 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:25:12,205 WARN [main] .s.c.c.c.ConfigServicePropertySourceLocator: Could not locate PropertySource: 500 : [{"timestamp":"2021-08-26T09:25:12.176+00:00","status":500,"error":"Internal Server Error","message":"","path":"/svc-scheduler-transaction-log/preprod/v1"}]
+2021-08-26T16:25:12,211 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:25:12,798 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:25:12,844 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 40ms. Found 2 JPA repository interfaces.
+2021-08-26T16:25:12,992 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:25:13,395 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:25:13,402 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:25:13,403 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:25:13,404 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:25:13,509 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:25:13,509 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1276 ms
+2021-08-26T16:25:13,637 ERROR[main] .s.b.w.e.t.TomcatStarter: Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'servletEndpointRegistrar' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar]: Factory method 'servletEndpointRegistrar' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'healthEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthEndpoint' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthContributorAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2021-08-26T16:25:13,654 INFO [main] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:25:13,661 WARN [main] .s.c.s.AbstractApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-08-26T16:25:13,674 INFO [main] .s.b.a.l.ConditionEvaluationReportLoggingListener: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-26T16:25:13,680 ERROR[main] .s.b.d.LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2021-08-26T16:36:12,785 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:36:21,265 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:36:21,266 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:36:21,296 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:36:21,860 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:36:21,917 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 49ms. Found 2 JPA repository interfaces.
+2021-08-26T16:36:22,071 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:36:22,481 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:36:22,488 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:36:22,489 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:36:22,490 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:36:22,593 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:36:22,594 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1287 ms
+2021-08-26T16:36:22,890 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:36:25,792 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:36:25,854 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:36:25,911 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:36:26,013 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:36:26,104 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:36:28,698 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:36:28,705 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:36:29,193 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:36:29,544 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:36:29,901 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:36:30,745 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:36:30,761 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:36:30,762 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:36:30,769 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 7 ms
+2021-08-26T16:36:30,825 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:36:30,846 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/schedule-payment'
+2021-08-26T16:36:31,665 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 21.199 seconds (JVM running for 22.995)
+2021-08-26T16:37:07,139 INFO [RMI TCP Connection(4)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:37:07,141 INFO [RMI TCP Connection(4)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:37:07,143 INFO [RMI TCP Connection(4)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:37:07,144 INFO [RMI TCP Connection(4)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:37:07,146 INFO [RMI TCP Connection(4)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:37:07,155 INFO [RMI TCP Connection(4)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:37:07,159 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:37:07,673 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:37:07,677 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:37:07,683 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:37:07,687 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:38:37,522 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:38:37,977 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:38:37,978 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:38:38,008 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:38:38,562 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:38:38,610 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 41ms. Found 2 JPA repository interfaces.
+2021-08-26T16:38:38,748 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:38:39,137 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:38:39,144 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:38:39,145 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:38:39,146 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:38:39,249 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:38:39,249 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1230 ms
+2021-08-26T16:38:39,530 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:38:41,965 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:38:42,024 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:38:42,088 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:38:42,198 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:38:42,288 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:38:44,398 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:38:44,405 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:38:44,615 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:38:44,968 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:38:45,330 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:38:46,163 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:38:46,242 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:38:46,261 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:38:46,519 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:38:46,519 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:38:46,528 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 8 ms
+2021-08-26T16:38:47,082 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 11.878 seconds (JVM running for 13.664)
+2021-08-26T16:39:18,682 INFO [RMI TCP Connection(3)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:39:18,685 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:39:18,689 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:39:18,691 INFO [RMI TCP Connection(3)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:39:18,694 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:39:18,705 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:39:18,709 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:39:26,157 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:39:28,109 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:39:28,111 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:39:28,145 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:39:28,685 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:39:28,731 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 40ms. Found 2 JPA repository interfaces.
+2021-08-26T16:39:28,869 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:39:29,263 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:39:29,270 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:39:29,271 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:39:29,272 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:39:29,376 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:39:29,377 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1221 ms
+2021-08-26T16:39:29,664 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:39:32,915 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:39:32,967 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:39:33,026 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:39:33,129 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:39:33,219 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:39:35,522 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:39:35,528 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:39:35,682 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:39:36,065 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:39:36,459 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:39:37,390 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:39:37,476 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:39:37,494 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:39:38,319 INFO [RMI TCP Connection(2)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:39:38,319 INFO [RMI TCP Connection(2)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:39:38,326 INFO [RMI TCP Connection(2)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 7 ms
+2021-08-26T16:39:38,344 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 14.44 seconds (JVM running for 16.245)
+2021-08-26T16:40:00,137 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        transactio0_.id as id1_3_,
+        transactio0_.created_by as created_2_3_,
+        transactio0_.created_date as created_3_3_,
+        transactio0_.description as descript4_3_,
+        transactio0_.end_time as end_time5_3_,
+        transactio0_.interaction_id as interact6_3_,
+        transactio0_.kip_id as kip_id7_3_,
+        transactio0_.nama_customer as nama_cus8_3_,
+        transactio0_.no_hp as no_hp9_3_,
+        transactio0_.start_time as start_t10_3_,
+        transactio0_.status as status11_3_,
+        transactio0_.terminal_id as termina12_3_,
+        transactio0_.tgl_transaksi as tgl_tra13_3_,
+        transactio0_.total_time as total_t14_3_,
+        transactio0_.transaction_id as transac15_3_,
+        transactio0_.transaction_type as transac16_3_ 
+    from
+        ps_transaction transactio0_ 
+    where
+        transactio0_.created_date=?
+2021-08-26T16:40:18,174 INFO [RMI TCP Connection(4)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:40:18,177 INFO [RMI TCP Connection(4)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:40:18,180 INFO [RMI TCP Connection(4)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:40:18,181 INFO [RMI TCP Connection(4)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:40:18,183 INFO [RMI TCP Connection(4)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:40:18,193 INFO [RMI TCP Connection(4)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:40:18,197 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:40:18,729 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:40:18,733 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:40:18,739 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:40:18,742 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:40:47,917 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:40:48,341 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:40:48,342 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:40:48,369 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:40:48,933 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:40:48,978 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 38ms. Found 2 JPA repository interfaces.
+2021-08-26T16:40:49,113 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:40:49,511 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:40:49,518 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:40:49,519 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:40:49,519 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:40:49,621 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:40:49,622 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1239 ms
+2021-08-26T16:40:49,901 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:40:53,000 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:40:53,061 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:40:53,116 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:40:53,217 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:40:53,311 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:40:55,394 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:40:55,401 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:40:55,532 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:40:55,874 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:40:56,237 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:40:57,080 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:40:57,159 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:40:57,179 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:40:57,587 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:40:57,588 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:40:57,596 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 8 ms
+2021-08-26T16:40:58,040 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 12.43 seconds (JVM running for 14.279)
+2021-08-26T16:41:00,157 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        transactio0_.id as id1_3_,
+        transactio0_.created_by as created_2_3_,
+        transactio0_.created_date as created_3_3_,
+        transactio0_.description as descript4_3_,
+        transactio0_.end_time as end_time5_3_,
+        transactio0_.interaction_id as interact6_3_,
+        transactio0_.kip_id as kip_id7_3_,
+        transactio0_.nama_customer as nama_cus8_3_,
+        transactio0_.no_hp as no_hp9_3_,
+        transactio0_.start_time as start_t10_3_,
+        transactio0_.status as status11_3_,
+        transactio0_.terminal_id as termina12_3_,
+        transactio0_.tgl_transaksi as tgl_tra13_3_,
+        transactio0_.total_time as total_t14_3_,
+        transactio0_.transaction_id as transac15_3_,
+        transactio0_.transaction_type as transac16_3_ 
+    from
+        ps_transaction transactio0_ 
+    where
+        transactio0_.created_date=?
+2021-08-26T16:41:19,277 INFO [RMI TCP Connection(4)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:41:19,280 INFO [RMI TCP Connection(4)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:41:19,283 INFO [RMI TCP Connection(4)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:41:19,284 INFO [RMI TCP Connection(4)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:41:19,286 INFO [RMI TCP Connection(4)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:41:19,295 INFO [RMI TCP Connection(4)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:41:19,300 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:41:19,848 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:41:19,852 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:41:19,858 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:41:19,862 INFO [RMI TCP Connection(4)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:45:21,786 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:45:22,342 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:45:22,343 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:45:22,373 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:45:22,928 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:45:22,974 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 39ms. Found 2 JPA repository interfaces.
+2021-08-26T16:45:23,119 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:45:23,517 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:45:23,525 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:45:23,526 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:45:23,526 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:45:23,629 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:45:23,629 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1238 ms
+2021-08-26T16:45:23,916 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:45:27,020 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:45:27,082 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:45:27,138 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:45:27,240 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:45:27,328 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:45:29,600 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:45:29,606 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:45:29,748 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:45:30,104 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:45:30,482 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:45:31,321 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:45:31,401 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:45:31,419 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:45:31,650 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:45:31,650 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:45:31,657 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 7 ms
+2021-08-26T16:45:32,244 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 12.726 seconds (JVM running for 14.543)
+2021-08-26T16:45:36,219 INFO [RMI TCP Connection(3)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:45:36,222 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:45:36,225 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:45:36,226 INFO [RMI TCP Connection(3)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:45:36,229 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:45:36,240 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:45:36,245 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:45:36,795 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:45:36,798 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:45:36,803 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:45:36,807 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:45:50,598 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:45:52,107 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:45:52,108 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:45:52,139 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:45:52,694 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:45:52,740 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 39ms. Found 2 JPA repository interfaces.
+2021-08-26T16:45:52,882 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:45:53,276 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:45:53,283 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:45:53,284 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:45:53,284 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:45:53,391 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:45:53,391 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1241 ms
+2021-08-26T16:45:53,677 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:45:56,850 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:45:56,904 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:45:56,962 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:45:57,061 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:45:57,150 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:45:59,357 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:45:59,363 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:45:59,530 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:45:59,888 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:46:00,259 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:46:01,099 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:46:01,180 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:46:01,198 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:46:01,720 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:46:01,721 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:46:01,727 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 6 ms
+2021-08-26T16:46:02,017 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 13.69 seconds (JVM running for 15.512)
+2021-08-26T16:47:00,135 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        transactio0_.id as id1_3_,
+        transactio0_.created_by as created_2_3_,
+        transactio0_.created_date as created_3_3_,
+        transactio0_.description as descript4_3_,
+        transactio0_.end_time as end_time5_3_,
+        transactio0_.interaction_id as interact6_3_,
+        transactio0_.kip_id as kip_id7_3_,
+        transactio0_.nama_customer as nama_cus8_3_,
+        transactio0_.no_hp as no_hp9_3_,
+        transactio0_.start_time as start_t10_3_,
+        transactio0_.status as status11_3_,
+        transactio0_.terminal_id as termina12_3_,
+        transactio0_.tgl_transaksi as tgl_tra13_3_,
+        transactio0_.total_time as total_t14_3_,
+        transactio0_.transaction_id as transac15_3_,
+        transactio0_.transaction_type as transac16_3_ 
+    from
+        ps_transaction transactio0_ 
+    where
+        transactio0_.created_date>=? 
+        and transactio0_.created_date<=?
+2021-08-26T16:47:04,370 INFO [RMI TCP Connection(3)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:47:04,372 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:47:04,375 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:47:04,376 INFO [RMI TCP Connection(3)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:47:04,379 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:47:04,388 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:47:04,392 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:47:04,905 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:47:04,909 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:47:04,915 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:47:04,919 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:51:06,883 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:51:08,712 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:51:08,713 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:51:08,743 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:51:09,337 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:51:09,384 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 40ms. Found 2 JPA repository interfaces.
+2021-08-26T16:51:09,529 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:51:09,957 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:51:09,964 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:51:09,965 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:51:09,966 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:51:10,070 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:51:10,070 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1305 ms
+2021-08-26T16:51:10,386 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:51:13,214 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:51:13,283 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:51:13,346 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:51:13,448 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:51:13,543 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:51:15,690 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:51:15,696 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:51:15,810 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:51:16,164 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:51:16,530 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:51:17,389 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:51:17,469 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:51:17,490 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:51:17,917 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:51:17,917 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:51:17,924 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 6 ms
+2021-08-26T16:51:18,335 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 13.749 seconds (JVM running for 15.576)
+2021-08-26T16:52:00,141 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        transactio0_.id as id1_3_,
+        transactio0_.created_by as created_2_3_,
+        transactio0_.created_date as created_3_3_,
+        transactio0_.description as descript4_3_,
+        transactio0_.end_time as end_time5_3_,
+        transactio0_.interaction_id as interact6_3_,
+        transactio0_.kip_id as kip_id7_3_,
+        transactio0_.nama_customer as nama_cus8_3_,
+        transactio0_.no_hp as no_hp9_3_,
+        transactio0_.start_time as start_t10_3_,
+        transactio0_.status as status11_3_,
+        transactio0_.terminal_id as termina12_3_,
+        transactio0_.tgl_transaksi as tgl_tra13_3_,
+        transactio0_.total_time as total_t14_3_,
+        transactio0_.transaction_id as transac15_3_,
+        transactio0_.transaction_type as transac16_3_ 
+    from
+        ps_transaction transactio0_ 
+    where
+        transactio0_.created_date>=? 
+        and transactio0_.created_date<=?
+2021-08-26T16:52:02,000 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:52:03,466 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:52:03,541 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:52:03,601 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:52:03,673 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:52:03,780 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:52:03,843 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:52:03,912 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:52:03,982 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:52:04,083 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:52:04,152 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:52:04,221 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:52:32,488 INFO [RMI TCP Connection(3)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:52:32,490 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:52:32,493 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:52:32,494 INFO [RMI TCP Connection(3)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:52:32,497 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:52:32,505 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:52:32,509 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:52:33,026 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:52:33,030 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:52:33,036 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:52:33,040 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:52:42,243 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:52:43,906 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:52:43,907 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:52:43,940 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:52:44,502 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:52:44,548 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 40ms. Found 2 JPA repository interfaces.
+2021-08-26T16:52:44,693 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:52:45,087 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:52:45,094 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:52:45,095 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:52:45,096 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:52:45,199 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:52:45,199 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1249 ms
+2021-08-26T16:52:45,488 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:52:48,521 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:52:48,570 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:52:48,629 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:52:48,727 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:52:48,819 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:52:50,930 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:52:50,938 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:52:51,081 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:52:51,448 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:52:51,824 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:52:52,660 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:52:52,740 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:52:52,758 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:52:53,329 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:52:53,330 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:52:53,337 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 7 ms
+2021-08-26T16:52:53,596 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 13.663 seconds (JVM running for 15.483)
+2021-08-26T16:53:00,139 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        transactio0_.id as id1_3_,
+        transactio0_.created_by as created_2_3_,
+        transactio0_.created_date as created_3_3_,
+        transactio0_.description as descript4_3_,
+        transactio0_.end_time as end_time5_3_,
+        transactio0_.interaction_id as interact6_3_,
+        transactio0_.kip_id as kip_id7_3_,
+        transactio0_.nama_customer as nama_cus8_3_,
+        transactio0_.no_hp as no_hp9_3_,
+        transactio0_.start_time as start_t10_3_,
+        transactio0_.status as status11_3_,
+        transactio0_.terminal_id as termina12_3_,
+        transactio0_.tgl_transaksi as tgl_tra13_3_,
+        transactio0_.total_time as total_t14_3_,
+        transactio0_.transaction_id as transac15_3_,
+        transactio0_.transaction_type as transac16_3_ 
+    from
+        ps_transaction transactio0_ 
+    where
+        transactio0_.created_date>=? 
+        and transactio0_.created_date<=?
+2021-08-26T16:53:01,430 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:53:01,516 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:53:01,590 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:53:01,664 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:53:01,741 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:53:01,820 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:53:01,893 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:53:01,972 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:53:02,041 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:53:02,113 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:53:02,231 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:53:02,311 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:53:24,320 INFO [RMI TCP Connection(3)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:53:24,322 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:53:24,325 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:53:24,326 INFO [RMI TCP Connection(3)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:53:24,329 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:53:24,337 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:53:24,342 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:53:24,879 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:53:24,883 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:53:24,889 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:53:24,892 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:56:21,317 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:56:22,342 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:56:22,343 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:56:22,375 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:56:22,965 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:56:23,015 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 43ms. Found 2 JPA repository interfaces.
+2021-08-26T16:56:23,158 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:56:23,577 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:56:23,585 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:56:23,586 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:56:23,586 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:56:23,692 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:56:23,692 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1305 ms
+2021-08-26T16:56:23,987 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:56:25,660 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:56:25,715 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:56:25,773 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:56:25,874 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:56:25,964 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:56:31,690 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:56:31,697 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:56:31,927 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:56:32,291 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:56:32,667 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:56:33,513 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:56:33,595 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:56:33,614 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:56:34,161 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:56:34,162 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:56:34,168 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 6 ms
+2021-08-26T16:56:34,443 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 15.48 seconds (JVM running for 17.308)
+2021-08-26T16:57:00,138 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        transactio0_.id as id1_3_,
+        transactio0_.created_by as created_2_3_,
+        transactio0_.created_date as created_3_3_,
+        transactio0_.description as descript4_3_,
+        transactio0_.end_time as end_time5_3_,
+        transactio0_.interaction_id as interact6_3_,
+        transactio0_.kip_id as kip_id7_3_,
+        transactio0_.nama_customer as nama_cus8_3_,
+        transactio0_.no_hp as no_hp9_3_,
+        transactio0_.start_time as start_t10_3_,
+        transactio0_.status as status11_3_,
+        transactio0_.terminal_id as termina12_3_,
+        transactio0_.tgl_transaksi as tgl_tra13_3_,
+        transactio0_.total_time as total_t14_3_,
+        transactio0_.transaction_id as transac15_3_,
+        transactio0_.transaction_type as transac16_3_ 
+    from
+        ps_transaction transactio0_ 
+    where
+        transactio0_.created_date>=? 
+        and transactio0_.created_date<=?
+2021-08-26T16:57:01,762 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:57:01,846 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:57:01,925 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:57:01,988 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:57:02,091 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:57:02,165 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:57:02,266 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:57:02,375 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:57:02,445 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:57:02,506 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:57:02,576 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:57:02,675 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:57:08,428 INFO [RMI TCP Connection(3)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:57:08,431 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:57:08,434 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:57:08,435 INFO [RMI TCP Connection(3)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:57:08,438 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:57:08,446 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:57:08,450 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:57:08,964 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:57:08,968 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:57:08,974 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:57:08,978 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:58:10,636 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T16:58:11,210 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T16:58:11,212 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T16:58:11,249 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T16:58:11,801 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T16:58:11,848 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 40ms. Found 2 JPA repository interfaces.
+2021-08-26T16:58:11,989 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T16:58:12,382 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T16:58:12,389 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:58:12,389 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T16:58:12,390 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T16:58:12,494 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T16:58:12,494 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1235 ms
+2021-08-26T16:58:12,784 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T16:58:16,028 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T16:58:16,082 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T16:58:16,140 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T16:58:16,241 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T16:58:16,332 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T16:58:18,900 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T16:58:18,907 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:58:19,056 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T16:58:19,411 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:58:19,796 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T16:58:20,639 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T16:58:20,724 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:58:20,743 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T16:58:21,575 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 13.221 seconds (JVM running for 15.103)
+2021-08-26T16:58:22,790 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T16:58:22,791 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T16:58:22,798 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 7 ms
+2021-08-26T16:59:00,141 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        transactio0_.id as id1_3_,
+        transactio0_.created_by as created_2_3_,
+        transactio0_.created_date as created_3_3_,
+        transactio0_.description as descript4_3_,
+        transactio0_.end_time as end_time5_3_,
+        transactio0_.interaction_id as interact6_3_,
+        transactio0_.kip_id as kip_id7_3_,
+        transactio0_.nama_customer as nama_cus8_3_,
+        transactio0_.no_hp as no_hp9_3_,
+        transactio0_.start_time as start_t10_3_,
+        transactio0_.status as status11_3_,
+        transactio0_.terminal_id as termina12_3_,
+        transactio0_.tgl_transaksi as tgl_tra13_3_,
+        transactio0_.total_time as total_t14_3_,
+        transactio0_.transaction_id as transac15_3_,
+        transactio0_.transaction_type as transac16_3_ 
+    from
+        ps_transaction transactio0_ 
+    where
+        transactio0_.created_date>=? 
+        and transactio0_.created_date<=?
+2021-08-26T16:59:01,673 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:59:03,091 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:59:03,208 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:59:03,279 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:59:03,376 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:59:03,457 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:59:03,516 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:59:03,588 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:59:03,699 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:59:03,760 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T16:59:03,848 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T16:59:03,938 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T16:59:05,115 INFO [RMI TCP Connection(3)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T16:59:05,117 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T16:59:05,120 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T16:59:05,121 INFO [RMI TCP Connection(3)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T16:59:05,123 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T16:59:05,132 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T16:59:05,136 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:59:05,660 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T16:59:05,663 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T16:59:05,669 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T16:59:05,672 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]
+2021-08-26T17:00:42,556 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T17:00:58,710 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Fetching config from server at : http://localhost:8888
+2021-08-26T17:01:00,590 INFO [main] .s.c.c.c.ConfigServicePropertySourceLocator: Located environment: name=svc-scheduler-transaction-log, profiles=[preprod], label=v1, version=null, state=null
+2021-08-26T17:01:00,592 INFO [main] .s.c.b.c.PropertySourceBootstrapConfiguration: Located property source: [BootstrapPropertySource {name='bootstrapProperties-svc-scheduler-transaction-log-preprod'}]
+2021-08-26T17:01:00,623 INFO [main] .s.b.SpringApplication: The following profiles are active: local
+2021-08-26T17:01:01,183 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-26T17:01:01,229 INFO [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 40ms. Found 2 JPA repository interfaces.
+2021-08-26T17:01:01,378 INFO [main] .s.c.c.s.GenericScope: BeanFactory id=2b526c6b-3b4f-348e-a355-f302ba9d3d23
+2021-08-26T17:01:01,815 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 9385 (http)
+2021-08-26T17:01:01,827 INFO [main] .a.j.l.DirectJDKLog: Initializing ProtocolHandler ["http-nio-9385"]
+2021-08-26T17:01:01,829 INFO [main] .a.j.l.DirectJDKLog: Starting service [Tomcat]
+2021-08-26T17:01:01,829 INFO [main] .a.j.l.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-08-26T17:01:01,954 INFO [main] .a.j.l.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-08-26T17:01:01,955 INFO [main] .s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1321 ms
+2021-08-26T17:01:02,243 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Starting...
+2021-08-26T17:01:05,571 INFO [main] .z.h.HikariDataSource: HikariPool-1 - Start completed.
+2021-08-26T17:01:05,633 INFO [main] .h.j.i.u.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-26T17:01:05,693 INFO [main] .h.Version: HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-26T17:01:05,797 INFO [main] .h.a.c.r.j.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-26T17:01:05,890 INFO [main] .h.d.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-08-26T17:01:08,371 INFO [main] .h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-26T17:01:08,378 INFO [main] .s.o.j.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T17:01:08,489 WARN [main] .s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-26T17:01:08,853 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-26T17:01:09,222 INFO [main] .s.s.c.ExecutorConfigurationSupport: Initializing ExecutorService 'taskScheduler'
+2021-08-26T17:01:10,072 INFO [main] .s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-08-26T17:01:10,157 INFO [main] .a.j.l.DirectJDKLog: Starting ProtocolHandler ["http-nio-9385"]
+2021-08-26T17:01:10,175 INFO [main] .s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 9385 (http) with context path '/svc-scheduler-transaction-log'
+2021-08-26T17:01:10,457 INFO [RMI TCP Connection(1)-127.0.0.1] .a.j.l.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-26T17:01:10,457 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2021-08-26T17:01:10,464 INFO [RMI TCP Connection(1)-127.0.0.1] .s.w.s.FrameworkServlet: Completed initialization in 7 ms
+2021-08-26T17:01:10,998 INFO [main] .s.b.StartupInfoLogger: Started SvcSchedulerTransactionLogApplication in 14.592 seconds (JVM running for 16.412)
+2021-08-26T17:02:00,137 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        transactio0_.id as id1_3_,
+        transactio0_.created_by as created_2_3_,
+        transactio0_.created_date as created_3_3_,
+        transactio0_.description as descript4_3_,
+        transactio0_.end_time as end_time5_3_,
+        transactio0_.interaction_id as interact6_3_,
+        transactio0_.kip_id as kip_id7_3_,
+        transactio0_.nama_customer as nama_cus8_3_,
+        transactio0_.no_hp as no_hp9_3_,
+        transactio0_.start_time as start_t10_3_,
+        transactio0_.status as status11_3_,
+        transactio0_.terminal_id as termina12_3_,
+        transactio0_.tgl_transaksi as tgl_tra13_3_,
+        transactio0_.total_time as total_t14_3_,
+        transactio0_.transaction_id as transac15_3_,
+        transactio0_.transaction_type as transac16_3_ 
+    from
+        ps_transaction transactio0_ 
+    where
+        transactio0_.created_date>=? 
+        and transactio0_.created_date<=?
+2021-08-26T17:02:01,666 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T17:02:03,400 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T17:02:05,144 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T17:02:05,237 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T17:02:05,498 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T17:02:05,567 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T17:02:05,643 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T17:02:05,712 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T17:02:05,784 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T17:02:05,886 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        lgpayment0_.id as id1_0_,
+        lgpayment0_.amount as amount2_0_,
+        lgpayment0_.created_by as created_3_0_,
+        lgpayment0_.created_date as created_4_0_,
+        lgpayment0_.ecr as ecr5_0_,
+        lgpayment0_.fa_account_id as fa_accou6_0_,
+        lgpayment0_.no_hp as no_hp7_0_,
+        lgpayment0_.payment_method as payment_8_0_,
+        lgpayment0_.rec_status as rec_stat9_0_,
+        lgpayment0_.response_code as respons10_0_,
+        lgpayment0_.status as status11_0_,
+        lgpayment0_.submit_amount as submit_12_0_,
+        lgpayment0_.transaction_id as transac13_0_,
+        lgpayment0_.updated_by as updated14_0_,
+        lgpayment0_.updated_date as updated15_0_ 
+    from
+        lg_payment lgpayment0_ 
+    where
+        lgpayment0_.transaction_id=?
+2021-08-26T17:02:05,945 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        terminal0_.id as id1_2_0_,
+        terminal0_.area as area2_2_0_,
+        terminal0_.created_by as created_3_2_0_,
+        terminal0_.created_date as created_4_2_0_,
+        terminal0_.ctp_type as ctp_type5_2_0_,
+        terminal0_.kecamatan as kecamata6_2_0_,
+        terminal0_.kode_pos as kode_pos7_2_0_,
+        terminal0_.kontak_pic as kontak_p8_2_0_,
+        terminal0_.kota_kabupaten as kota_kab9_2_0_,
+        terminal0_.pic as pic10_2_0_,
+        terminal0_.rec_status as rec_sta11_2_0_,
+        terminal0_.regional as regiona12_2_0_,
+        terminal0_.regional_code as regiona13_2_0_,
+        terminal0_.status as status14_2_0_,
+        terminal0_.terminal_id as termina15_2_0_,
+        terminal0_.terminal_location as termina16_2_0_,
+        terminal0_.terminal_name as termina17_2_0_,
+        terminal0_.updated_by as updated18_2_0_,
+        terminal0_.updated_date as updated19_2_0_ 
+    from
+        ms_terminal terminal0_ 
+    where
+        terminal0_.terminal_id=?
+2021-08-26T17:02:06,005 DEBUG[scheduling-1] .h.e.j.s.SqlStatementLogger: 
+    select
+        regionalre0_.id as id1_1_0_,
+        regionalre0_.bank_code as bank_cod2_1_0_,
+        regionalre0_.bank_code_api as bank_cod3_1_0_,
+        regionalre0_.bank_name as bank_nam4_1_0_,
+        regionalre0_.regional as regional5_1_0_,
+        regionalre0_.regional_id as regional6_1_0_ 
+    from
+        ms_regional_revass regionalre0_ 
+    where
+        regionalre0_.regional_id=?
+2021-08-26T17:02:22,978 INFO [RMI TCP Connection(3)-127.0.0.1] .s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin: Application shutdown requested.
+2021-08-26T17:02:22,981 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'taskScheduler'
+2021-08-26T17:02:22,984 INFO [RMI TCP Connection(3)-127.0.0.1] .s.s.c.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-26T17:02:22,985 INFO [RMI TCP Connection(3)-127.0.0.1] .s.o.j.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-26T17:02:22,988 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2021-08-26T17:02:22,997 INFO [RMI TCP Connection(3)-127.0.0.1] .z.h.HikariDataSource: HikariPool-1 - Shutdown completed.
+2021-08-26T17:02:23,002 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Pausing ProtocolHandler ["http-nio-9385"]
+2021-08-26T17:02:23,530 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping service [Tomcat]
+2021-08-26T17:02:23,533 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-08-26T17:02:23,538 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Stopping ProtocolHandler ["http-nio-9385"]
+2021-08-26T17:02:23,542 INFO [RMI TCP Connection(3)-127.0.0.1] .a.j.l.DirectJDKLog: Destroying ProtocolHandler ["http-nio-9385"]

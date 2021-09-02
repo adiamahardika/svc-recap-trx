@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="LOG_PATTERN">%style{%d{ISO8601}} %highlight{%-5level}[%style{%t}{bright,blue}] %style{%C{.1}}{bright,yellow}: %msg%n%throwable</Property>
+        <Property name="APP_LOG_ROOT">log/svc-scheduler-payment/</Property>
+        <Property name="LOG_REQUEST">%style{%d{ISO8601}} %n%m{ansi} %n%throwable</Property>
+        <Property name="LOG_INFO_PATTERN">%m%n</Property>
+        <Property name="LOG_ESB_PATTERN">%style{%d{ISO8601}}%n%m%n</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+        </Console>
+        <RollingFile
+                name="RollingFile"
+                fileName="${APP_LOG_ROOT}/svc-esb-integration-psb.log"
+                filePattern="${APP_LOG_ROOT}/svc-esb-integration-psb_%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile
+                name="RequestResponseLog"
+                fileName="${APP_LOG_ROOT}/request-response.log"
+                filePattern="${APP_LOG_ROOT}/request-response_%d{yyyy-MM-dd}.log">
+            <Policies> 
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <PatternLayout pattern="${LOG_INFO_PATTERN}" />
+        </RollingFile>        
+        <RollingFile
+                name="ScheduleLogUpfrontPayment"
+                fileName="${APP_LOG_ROOT}/schedule-payment-log.log"
+                filePattern="${APP_LOG_ROOT}/schedule-payment-log_%d{yyyy-MM-dd}.log">
+            <Policies> 
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <PatternLayout pattern="${LOG_ESB_PATTERN}" />
+        </RollingFile>
+        <RollingFile
+                name="EsbLog"
+                fileName="${APP_LOG_ROOT}/esb-log.log"
+                filePattern="${APP_LOG_ROOT}/esb-log_%d{yyyy-MM-dd}.log">
+            <Policies> 
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <PatternLayout pattern="${LOG_ESB_PATTERN}" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- LOG everything at INFO level -->
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFile" />
+        </Root>
+        <!-- LOG "trilogi.mygrapari.service*" at TRACE level -->
+        <Logger name="trilogi.myg.svc.scheduler.payment" level="trace" />
+        <Logger name="org.hibernate.SQL" level="debug" />
+        <Logger name="logging.level.org.hibernate.type.descriptor.sql" level="debug" />
+        <Logger name="logging.level.org.springframework.web.client.RestTemplate" level="debug" />
+        <Logger name="logging.level.org.apache.http" level="debug" />
+        <Logger name="logging.level.org.apache.http.wire" level="debug" />
+        <Logger name="EsbLog" level="debug" additivity="false">
+            <appender-ref ref="EsbLog" />
+        </Logger>
+        <Logger name="RequestResponseLog" level="info" additivity="false">
+		    <appender-ref ref="RequestResponseLog" />
+		</Logger>
+    </Loggers>
+
+</Configuration>

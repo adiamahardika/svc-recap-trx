@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="LOG_PATTERN">%style{%d{ISO8601}} %highlight{%-5level} %style{%C{.1}}{bright,yellow}: %msg%n%throwable</Property>
+        <Property name="APP_LOG_ROOT">/trilogi/service/log/svc-scheduler-transaction-log/</Property>
+        <Property name="LOG_REQUEST">%style{%d{ISO8601}} %n%m{ansi} %n%throwable</Property>
+        <Property name="LOG_INFO_PATTERN">%m%n</Property>
+        <Property name="LOG_ESB_INTEGRATION_PATTERN">%style{%d{ISO8601}}%n%m%n</Property>
+		<Property name="MYHOST">${env:HOSTNAME}</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+        </Console>
+        <RollingFile
+                name="RollingFile"
+                fileName="${APP_LOG_ROOT}/svc_scheduler_transaction_log_${MYHOST}.log"
+                filePattern="${APP_LOG_ROOT}/svc_scheduler_transaction_log_${MYHOST}_%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="schedule-log"
+                     fileName="${APP_LOG_ROOT}/svc_transaction_schedule_${MYHOST}.log"
+                     filePattern="${APP_LOG_ROOT}/svc_transaction_schedule_${MYHOST}_%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- LOG everything at INFO level -->
+        <Root level="info" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFile" />
+        </Root>
+        <!-- LOG "trilogi.mygrapari.service*" at TRACE level -->
+        <Logger name="trilogi.myg.svc.scheduler.transaction.log" level="debug" />
+        <Logger name="org.hibernate.SQL" level="trace" />
+        <Logger name="logging.level.org.springframework.web.client.RestTemplate" level="trace" />
+        <Logger name="logging.level.org.hibernate.type.descriptor.sql" level="trace" />
+        <Logger name="schedule-log" level="debug" additivity="false">
+            <appender-ref ref="schedule-log" level="info"/>
+        </Logger>
+        <Logger name="schedule-log-edc" level="debug" additivity="false">
+            <appender-ref ref="schedule-log-edc" level="info"/>
+        </Logger>
+    </Loggers>
+
+</Configuration>
