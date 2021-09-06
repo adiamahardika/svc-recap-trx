@@ -1,6 +1,7 @@
 package trilogi.myg.svc.scheduler.transaction.log.schedule;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -8,6 +9,8 @@ import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -24,6 +27,7 @@ import trilogi.myg.svc.scheduler.transaction.log.entity.LgPayment;
 import trilogi.myg.svc.scheduler.transaction.log.entity.TransactionLog;
 import trilogi.myg.svc.scheduler.transaction.log.repository.LgPaymentRepository;
 import trilogi.myg.svc.scheduler.transaction.log.repository.PsTransactionRepository;
+import trilogi.myg.svc.scheduler.transaction.log.service.SFTPClient;
 
 @Component
 @RefreshScope
@@ -37,6 +41,9 @@ public class TransactionLogTask {
 	@Autowired
     private PsTransactionRepository transactionRepository;
 	
+	@Autowired
+    private SFTPClient sftpClient;
+	
 	@Value("${sftp.scheduler.transaction.log.folder.local}")
     private String folderLocal;
 	
@@ -44,7 +51,6 @@ public class TransactionLogTask {
     public void transactionLogScheduler() {
 		scheduleLog.info("Starting Scheduler ...");
 		try {
-			DecimalFormat df = new DecimalFormat("###");
             Calendar cal = Calendar.getInstance();
             cal.add(Calendar.DATE, -1);
             cal.set(Calendar.HOUR_OF_DAY, 0);
@@ -74,75 +80,57 @@ public class TransactionLogTask {
 	            writer.write(header);
 	            writer.newLine(); 
 	            
-	            List<TransactionLog> listData = transactionRepository.getAllTransactionToday(new Timestamp(start.getTime()), new Timestamp(end.getTime()));
-	            for (TransactionLog value: listData) {
-	            	LgPayment lgPayment = lgPaymentRepository.findByTransactionId(value.getTransactionId());
-	            	String paymentMethod = lgPayment != null ? lgPayment.getPaymentMethod().toUpperCase() : "NONE";
-	            	String priceBase = lgPayment != null ? lgPayment.getAmount().toString().replaceFirst("^0+(?!$)", "") : "";
-	            	if (priceBase != "") {            		
-	            		priceBase = priceBase.substring(0, priceBase.length() - 2);
+	            List<String> listPhoneNumber = transactionRepository.getPhoneNumber(new Timestamp(start.getTime()), new Timestamp(end.getTime()));
+	            for (String phoneNumber: listPhoneNumber) {
+	            	
+	            	String[] listTrxType = new String[]{"IP", "PB", "PSB", "UP", "PA", "GK"};
+	            	List<String> trxType = new ArrayList <String>(Arrays.asList(listTrxType));
+	    	        
+//	            	~!Get Success Transaction!~
+	            	List<TransactionLog> successTransaction = transactionRepository.getSuccessTransaction(new Timestamp(start.getTime()), new Timestamp(end.getTime()), phoneNumber, "00");
+	            	if (successTransaction.size() > 0) {
+	            		for (TransactionLog succesValue: successTransaction) {	            		
+		            		LgPayment lgPayment = lgPaymentRepository.findByTransactionId(succesValue.getTransactionId());
+		            		String data = writeData(succesValue, lgPayment, start, end);
+		            		writer.write(data);
+		                	writer.newLine();
+		            		if (trxType.contains(succesValue.getTransactionType()) == true) {	            			
+		            			trxType.remove(succesValue.getTransactionType());
+		            		}
+		            	}
 	            	}
-	            	String paymentValue = lgPayment != null ? lgPayment.getSubmitAmount().toString().replaceFirst("^0+(?!$)", "") : "";
-	            	if (paymentValue != "") {            		
-	            		paymentValue = paymentValue.substring(0, paymentValue.length() - 2);
+	            	
+//	            	~!Get Cancel Transaction!~
+	            	List<TransactionLog> cancelTransaction = transactionRepository.getTransaction(new Timestamp(start.getTime()), new Timestamp(end.getTime()), phoneNumber, "02", trxType);
+	            	if (cancelTransaction.size() > 0) {
+		            	for (TransactionLog cancelValue: cancelTransaction) {	            		
+		            		LgPayment lgPayment = lgPaymentRepository.findByTransactionId(cancelValue.getTransactionId());
+		            		String data = writeData(cancelValue, lgPayment, start, end);
+		            		writer.write(data);
+		                	writer.newLine();
+		                	if (trxType.contains(cancelValue.getTransactionType()) == true) {	            			
+		            			trxType.remove(cancelValue.getTransactionType());
+		            		}
+		            	}
 	            	}
 	            	
-	            	String transactionType = "";
-	            	switch (value.getTransactionType().toUpperCase()) {
-					case "IP":
-						transactionType = "Beli Pulsa";
-						break;
-					case "UP":
-						transactionType = "Ganti Kartu Upgrade 4G";
-						break;
-					case "GK":
-						transactionType = "Ganti Kartu Hilang/Rusak";
-						break;
-					case "PB":
-						transactionType = "Pembayaran Tagihan kartuHalo";
-						break;
-					case "PSB":
-						transactionType = "Pasang Baru kartuHalo";
-						break;
-					case "PA":
-						transactionType = "Aktivasi Paket";
-						break;
-					default:
-						transactionType = "Beli Pulsa";
-						break;
-					}
+//	            	~!Get Fail Transaction!~
+	            	List<TransactionLog> failTransaction = transactionRepository.getTransaction(new Timestamp(start.getTime()), new Timestamp(end.getTime()), phoneNumber, "01", trxType);
+	            	for (TransactionLog failValue: failTransaction) {	            		
+	            		LgPayment lgPayment = lgPaymentRepository.findByTransactionId(failValue.getTransactionId());
+	            		String data = writeData(failValue, lgPayment, start, end);
+	            		writer.write(data);
+	                	writer.newLine();
+	            	}
 	            	
-	            	String status = "";
-	            	switch (value.getStatus()) {
-					case "00":
-						status = "Berhasil";
-						break;
-					case "01":
-						status = "Gagal";
-						break;
-					case "02":
-						status = "Cancel";
-						break;
-					default:
-						status = "Berhasil";
-						break;
-					}
 	            	
-	            	String data = value.getTransactionId() + "|" + new SimpleDateFormat("yyyy-MM-dd").format(start.getTime()) + " " + value.getStartTime() + "|";
-	            	data += (value.getTerminalId() + "|" + transactionType + "|" + value.getNoHp() + "|");
-	            	data += (new SimpleDateFormat("yyyy-MM-dd").format(start.getTime()) + " " + value.getStartTime() + "|");
-	            	data += (new SimpleDateFormat("yyyy-MM-dd").format(start.getTime()) + " " + value.getEndTime() + "|");
-	            	data += (status + "|" +  value.getDescription() + "|" + paymentMethod + "|" + priceBase + "|" + paymentValue + "|" + "T");
-	            	writer.write(data);
-	                writer.newLine();
-	                System.out.println(data);
 	            }
 	            writer.close();
             } else {
         	 Path pathSuccess = Paths.get(folderLocal + "/sent/" + file);
-//             if (!Files.exists(pathSuccess)) { //send to sftp
-//                 sentToSftpRevass((folderLocal + file), file, folderLocal, 0);
-//             }
+             if (!Files.exists(pathSuccess)) { //send to sftp
+                 sentToSftpRevass((folderLocal + file), file);
+             }
             }
 		} catch (Exception e) {
 			 e.printStackTrace();
@@ -150,4 +138,83 @@ public class TransactionLogTask {
 		}
 	}
 
+	public static String writeData (TransactionLog value, LgPayment lgPayment, Date start, Date end) {
+    	String paymentMethod = lgPayment != null ? lgPayment.getPaymentMethod().toUpperCase() : "NONE";
+    	String priceBase = lgPayment != null ? lgPayment.getAmount().toString().replaceFirst("^0+(?!$)", "") : "";
+    	if (priceBase != "") {            		
+    		priceBase = priceBase.substring(0, priceBase.length() - 2);
+    	}
+    	String paymentValue = lgPayment != null ? lgPayment.getSubmitAmount().toString().replaceFirst("^0+(?!$)", "") : "";
+    	if (paymentValue != "") {            		
+    		paymentValue = paymentValue.substring(0, paymentValue.length() - 2);
+    	}
+    	
+    	String transactionType = "";
+    	switch (value.getTransactionType().toUpperCase()) {
+		case "IP":
+			transactionType = "Beli Pulsa";
+			break;
+		case "UP":
+			transactionType = "Ganti Kartu Upgrade 4G";
+			break;
+		case "GK":
+			transactionType = "Ganti Kartu Hilang/Rusak";
+			break;
+		case "PB":
+			transactionType = "Pembayaran Tagihan kartuHalo";
+			break;
+		case "PSB":
+			transactionType = "Pasang Baru kartuHalo";
+			break;
+		case "PA":
+			transactionType = "Aktivasi Paket";
+			break;
+		default:
+			transactionType = "Beli Pulsa";
+			break;
+		}
+    	
+    	String status = "";
+    	switch (value.getStatus()) {
+		case "00":
+			status = "Berhasil";
+			break;
+		case "01":
+			status = "Gagal";
+			break;
+		case "02":
+			status = "Cancel";
+			break;
+		default:
+			status = "Berhasil";
+			break;
+		}
+    	
+    	String data = value.getTransactionId() + "|" + new SimpleDateFormat("yyyy-MM-dd").format(start.getTime()) + " " + value.getStartTime() + "|";
+    	data += (value.getTerminalId() + "|" + transactionType + "|" + value.getNoHp() + "|");
+    	data += (new SimpleDateFormat("yyyy-MM-dd").format(start.getTime()) + " " + value.getStartTime() + "|");
+    	data += (new SimpleDateFormat("yyyy-MM-dd").format(start.getTime()) + " " + value.getEndTime() + "|");
+    	data += (status + "|" +  value.getDescription() + "|" + paymentMethod + "|" + priceBase + "|" + paymentValue + "|" + "T");
+    	
+    	return data;
+	}
+	
+	private void sentToSftpRevass(String source, String destination) {
+        
+        try {
+            sftpClient.connect();
+            sftpClient.upload(source, destination);
+            sftpClient.disconnect();
+
+            //move to success
+            File scr = new File(source);
+            File dest = new File(folderLocal + "/sent/" + destination);
+            Files.copy(scr.toPath(), dest.toPath());
+            
+        } catch (Exception er) {
+            er.printStackTrace();
+            scheduleLog.error(er.getMessage());
+        }
+
+    }
 }

@@ -12,7 +12,13 @@ import trilogi.myg.svc.scheduler.transaction.log.entity.TransactionLog;
 
 @Repository
 public interface PsTransactionRepository extends CrudRepository<TransactionLog, Long> {
-
-    @Query(value = "SELECT DISTINCT ON (transaction_id) id, transaction_id, tgl_transaksi, terminal_id, transaction_type, no_hp, start_time, end_time, total_time, status, kip_id, interaction_id, nama_customer, description, created_by, created_date FROM ( SELECT * FROM ps_transaction WHERE created_date >=:start AND created_date <= :end ORDER BY status)", nativeQuery = true)
-    List<TransactionLog> getAllTransactionToday(@Param("start") Timestamp start, @Param("end") Timestamp end); 
+    
+    @Query(value = "SELECT * FROM ps_transaction WHERE created_date >=:start AND created_date <= :end AND no_hp = :no_hp AND status = :status", nativeQuery = true)
+    List<TransactionLog> getSuccessTransaction(@Param("start") Timestamp start, @Param("end") Timestamp end, @Param("no_hp") String no_hp, @Param("status") String status);
+    
+    @Query(value = "SELECT DISTINCT ON (transaction_type) ps_transaction.* FROM ps_transaction WHERE created_date >=:start AND created_date <= :end AND no_hp = :no_hp AND status = :status AND transaction_type IN :transaction_type", nativeQuery = true)
+    List<TransactionLog> getTransaction(@Param("start") Timestamp start, @Param("end") Timestamp end, @Param("no_hp") String no_hp, @Param("status") String status, @Param("transaction_type") List<String> transaction_type);
+    
+    @Query(value = "SELECT DISTINCT ON (no_hp) ps_transaction.no_hp FROM ps_transaction WHERE created_date >=:start AND created_date <= :end", nativeQuery = true)
+    List<String> getPhoneNumber(@Param("start") Timestamp start, @Param("end") Timestamp end);
 }

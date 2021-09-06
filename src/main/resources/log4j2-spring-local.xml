@@ -58,12 +58,12 @@
         </Root>
         <!-- LOG "trilogi.mygrapari.service*" at TRACE level -->
         <Logger name="trilogi.myg.svc.scheduler.payment" level="trace" />
-        <Logger name="org.hibernate.SQL" level="debug" />
-        <Logger name="logging.level.org.hibernate.type.descriptor.sql" level="debug" />
-        <Logger name="logging.level.org.springframework.web.client.RestTemplate" level="debug" />
+        <Logger name="org.hibernate.SQL" level="info" />
+        <Logger name="logging.level.org.hibernate.type.descriptor.sql" level="trace" />
+        <Logger name="logging.level.org.springframework.web.client.RestTemplate" level="trace" />
         <Logger name="logging.level.org.apache.http" level="debug" />
         <Logger name="logging.level.org.apache.http.wire" level="debug" />
-        <Logger name="EsbLog" level="debug" additivity="false">
+        <Logger name="EsbLog" level="trace" additivity="false">
             <appender-ref ref="EsbLog" />
         </Logger>
         <Logger name="RequestResponseLog" level="info" additivity="false">
