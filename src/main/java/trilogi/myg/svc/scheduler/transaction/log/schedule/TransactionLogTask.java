@@ -68,7 +68,7 @@ public class TransactionLogTask {
             Date end = cal.getTime();
 
             String fileName = new SimpleDateFormat("yyyyMMdd").format(start);
-            String file = "Trilogi_MyGraPARI_" + fileName + "_trilogi.csv";
+            String file = "Trilogi_MyGraPARI_" + fileName + ".csv";
             
             Path path = Paths.get(folderLocal + file);
             
@@ -126,6 +126,7 @@ public class TransactionLogTask {
 	            	
 	            }
 	            writer.close();
+	            sentToSftpRevass((folderLocal + file), file);
             } else {
         	 Path pathSuccess = Paths.get(folderLocal + "/sent/" + file);
              if (!Files.exists(pathSuccess)) { //send to sftp
