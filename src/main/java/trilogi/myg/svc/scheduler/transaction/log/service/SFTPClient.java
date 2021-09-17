@@ -27,12 +27,6 @@ public class SFTPClient {
     @Value("${sftp.transaction.log.host}")
     private String host;
 
-    @Value("${sftp.transaction.log.port}")
-    private String port;
-
-    @Value("${sftp.transaction.log.password}")
-    private String password;
-
     @Value("${sftp.transaction.log.folder}")
     private String folder;
 
@@ -41,9 +35,7 @@ public class SFTPClient {
         JSch jsch = new JSch();
         scheduleLog.info(username);
         scheduleLog.info(host);
-        scheduleLog.info(port);
-        session = jsch.getSession(username, host, Integer.parseInt(port));
-        session.setPassword(password);
+        session = jsch.getSession(username, host);
         session.setConfig("StrictHostKeyChecking", "no");
         session.connect();
     }

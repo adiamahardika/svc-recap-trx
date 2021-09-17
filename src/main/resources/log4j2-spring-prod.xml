@@ -2,7 +2,7 @@
 <Configuration status="WARN">
     <Properties>
         <Property name="LOG_PATTERN">%style{%d{ISO8601}} %highlight{%-5level} %style{%C{.1}}{bright,yellow}: %msg%n%throwable</Property>
-        <Property name="APP_LOG_ROOT">/trilogi/service/log/svc-scheduler-transaction-log/</Property>
+        <Property name="APP_LOG_ROOT">/apps/service/production/new/log/svc-scheduler-transaction-log/</Property>
         <Property name="LOG_REQUEST">%style{%d{ISO8601}} %n%m{ansi} %n%throwable</Property>
         <Property name="LOG_INFO_PATTERN">%m%n</Property>
         <Property name="LOG_ESB_INTEGRATION_PATTERN">%style{%d{ISO8601}}%n%m%n</Property>

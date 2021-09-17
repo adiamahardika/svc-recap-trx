@@ -47,7 +47,7 @@ public class TransactionLogTask {
 	@Value("${sftp.scheduler.transaction.log.folder.local}")
     private String folderLocal;
 	
-	@Scheduled(cron = "0 0/1 * 1/1 * *")
+	@Scheduled(cron = "0 0 2 1/1 * *")
     public void transactionLogScheduler() {
 		scheduleLog.info("Starting Scheduler ...");
 		try {
