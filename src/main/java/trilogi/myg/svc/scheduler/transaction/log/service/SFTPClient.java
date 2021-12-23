@@ -21,21 +21,18 @@ public class SFTPClient {
 
     private Session session = null;
 
-    @Value("${sftp.transaction.log.username}")
-    private String username;
-
-    @Value("${sftp.transaction.log.host}")
-    private String host;
-
-    @Value("${sftp.transaction.log.folder}")
-    private String folder;
-
+    String username = "birefusr";
+    String password = "";
+    String host = "10.54.3.206";
+    String folder = "/landing/tsel/higt_trans/mygrapari_transaction/";
+    String key = "/home/apps/.ssh/id_rsa";
     public void connect() throws JSchException {
         scheduleLog.info("Connecting to sftp server ...");
         JSch jsch = new JSch();
         scheduleLog.info(username);
         scheduleLog.info(host);
         session = jsch.getSession(username, host);
+        jsch.addIdentity(key);
         session.setConfig("StrictHostKeyChecking", "no");
         session.connect();
     }

@@ -24,8 +24,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import trilogi.myg.svc.scheduler.transaction.log.entity.LgPayment;
+import trilogi.myg.svc.scheduler.transaction.log.entity.LgSendFtpRekon;
 import trilogi.myg.svc.scheduler.transaction.log.entity.TransactionLog;
 import trilogi.myg.svc.scheduler.transaction.log.repository.LgPaymentRepository;
+import trilogi.myg.svc.scheduler.transaction.log.repository.LgSendFtpRepository;
 import trilogi.myg.svc.scheduler.transaction.log.repository.PsTransactionRepository;
 import trilogi.myg.svc.scheduler.transaction.log.service.SFTPClient;
 
@@ -42,10 +44,12 @@ public class TransactionLogTask {
     private PsTransactionRepository transactionRepository;
 	
 	@Autowired
+    private LgSendFtpRepository lgSendFtpRepository;
+	
+	@Autowired
     private SFTPClient sftpClient;
 	
-	@Value("${sftp.scheduler.transaction.log.folder.local}")
-    private String folderLocal;
+    String folderLocal = "/apps/service/production/new/trx-log/";
 	
 	@Scheduled(cron = "0 0 2 1/1 * *")
     public void transactionLogScheduler() {
@@ -72,6 +76,7 @@ public class TransactionLogTask {
             
             Path path = Paths.get(folderLocal + file);
             
+            Integer createdRow = 0;
             scheduleLog.info("Checking File : {}", file);
             if (!Files.exists(path)) {
 	            
@@ -94,6 +99,7 @@ public class TransactionLogTask {
 		            		String data = writeData(succesValue, lgPayment, start, end);
 		            		writer.write(data);
 		                	writer.newLine();
+		                	createdRow++;
 		            		if (trxType.contains(succesValue.getTransactionType()) == true) {	            			
 		            			trxType.remove(succesValue.getTransactionType());
 		            		}
@@ -108,6 +114,7 @@ public class TransactionLogTask {
 		            		String data = writeData(cancelValue, lgPayment, start, end);
 		            		writer.write(data);
 		                	writer.newLine();
+		                	createdRow++;
 		                	if (trxType.contains(cancelValue.getTransactionType()) == true) {	            			
 		            			trxType.remove(cancelValue.getTransactionType());
 		            		}
@@ -121,16 +128,17 @@ public class TransactionLogTask {
 	            		String data = writeData(failValue, lgPayment, start, end);
 	            		writer.write(data);
 	                	writer.newLine();
+	                	createdRow++;
 	            	}
 	            	
 	            	
 	            }
 	            writer.close();
-	            sentToSftpRevass((folderLocal + file), file);
+	            sentToSftpRevass((folderLocal + file), file, createdRow, createdRow);
             } else {
-        	 Path pathSuccess = Paths.get(folderLocal + "/sent/" + file);
+        	 Path pathSuccess = Paths.get(folderLocal + "sent/" + file);
              if (!Files.exists(pathSuccess)) { //send to sftp
-                 sentToSftpRevass((folderLocal + file), file);
+                 sentToSftpRevass((folderLocal + file), file, createdRow, createdRow);
              }
             }
 		} catch (Exception e) {
@@ -200,7 +208,13 @@ public class TransactionLogTask {
     	return data;
 	}
 	
-	private void sentToSftpRevass(String source, String destination) {
+	private void sentToSftpRevass(String source, String destination, Integer createdRow, Integer totalRow) {
+		LgSendFtpRekon lg = new LgSendFtpRekon();
+        lg.setFileName(destination);
+        lg.setRekonType("Trx-log");
+        lg.setCreatedRow(createdRow);
+        lg.setTotalRow(totalRow);
+        lg.setCreatedAt(new Timestamp(new Date().getTime()));
         
         try {
             sftpClient.connect();
@@ -209,12 +223,20 @@ public class TransactionLogTask {
 
             //move to success
             File scr = new File(source);
-            File dest = new File(folderLocal + "/sent/" + destination);
+            File dest = new File(folderLocal + "sent/" + destination);
             Files.copy(scr.toPath(), dest.toPath());
+            
+            lg.setStatus("00");
+            lg.setDescription("Success");
+            lgSendFtpRepository.save(lg);
             
         } catch (Exception er) {
             er.printStackTrace();
             scheduleLog.error(er.getMessage());
+            
+            lg.setStatus("01");
+            lg.setDescription(er.getMessage());
+            lgSendFtpRepository.save(lg);
         }
 
     }

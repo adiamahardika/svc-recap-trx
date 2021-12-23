@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
     <Properties>
-        <Property name="LOG_PATTERN">%style{%d{ISO8601}} %highlight{%-5level} %style{%C{.1}}{bright,yellow}: %msg%n%throwable</Property>
+		<Property name="LOG_PATTERN">%style{%d{ISO8601}} %highlight{%-5level}[%style{%t}{bright,blue}] %style{%C{.1}}{bright,yellow}: %msg%n%throwable</Property>
         <Property name="APP_LOG_ROOT">/apps/service/production/new/log/svc-scheduler-transaction-log/</Property>
+        <Property name="MYHOST">${env:HOSTNAME}</Property>
         <Property name="LOG_REQUEST">%style{%d{ISO8601}} %n%m{ansi} %n%throwable</Property>
         <Property name="LOG_INFO_PATTERN">%m%n</Property>
-        <Property name="LOG_ESB_INTEGRATION_PATTERN">%style{%d{ISO8601}}%n%m%n</Property>
-		<Property name="MYHOST">${env:HOSTNAME}</Property>
+        <Property name="LOG_ESB_PATTERN">%style{%d{ISO8601}}%n%m%n</Property>
     </Properties>
 
     <Appenders>
